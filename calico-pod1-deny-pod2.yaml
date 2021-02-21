@@ -1,0 +1,11 @@
+apiVersion: projectcalico.org/v3
+kind: GlobalNetworkPolicy
+metadata:
+  name: deny-pod2
+spec:
+  selector: datou == 'pod1'
+  ingress:
+  - action: Deny
+    protocol: TCP
+    source:
+      selector: datou == 'pod2'

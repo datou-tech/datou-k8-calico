@@ -72,3 +72,6 @@ These steps will be referenced for the following tests.
 1. Attempt to hit pod 1 and confirm you cannot - `curl <POD_IP1>`
 1. Delete the policy - `calicoctl delete -f calico-pod1-deny-pod2.yaml`
 
+#### Calico External DNS Endpoint Policies
+
+While it is only possible to control traffic via IP addresses or selectors, it is possible to allow/deny egress by DNS in Calico Enterprise. 
